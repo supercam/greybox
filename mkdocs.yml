@@ -1,5 +1,5 @@
 site_name: cicdprojects
-site_url: https://supercam.github.io/
+site_url: https://jamlewisiii.github.io/
 nav:
     - Home: index.md
     - Projects: projects.md
