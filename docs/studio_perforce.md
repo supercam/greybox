@@ -4,7 +4,7 @@ This project is about deploying a Mobile Device Manager(MDM) into an organizatio
 The MDM that was used was VMware Workspace One formerly known as Airwatch.
 
 Use Case:
-The purpose of this is to create a file server for learning / homelab to do achieve the following:
+To create a file server for learning / homelab to do achieve the following:
 
 * Have more storage rather than what is available on laptop
 * To better understand how to use virtualization
@@ -14,9 +14,9 @@ The purpose of this is to create a file server for learning / homelab to do achi
 * To not give up so much control to 3rd party services
 * Have more control over my own data
 
-Tasks
-These are the tasks that need to be solved:
 
+
+These are the tasks that need to be solved:
 
 Initial layout
 

@@ -1,8 +1,6 @@
-# Projects
+# Technical Documenation Project:
 
-Technical Documentation project:
-
-This project is meant to demonstrate the use of a Continuous Integration / Continuous Deployment pipeline. It uses mkdocs with the material theme.
+This project is meant to demonstrate the use of a Continuous Integration / Continuous Deployment pipeline. It uses mkdocs with the material theme and is hosted on github.
 
 
 - Pros
