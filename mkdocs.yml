@@ -1,10 +1,14 @@
-site_name: cicdprojects
+site_name: Supercam Homelabs
 site_url: https://supercam.github.io/greybox
 nav:
     - Home: index.md
     - Projects: projects.md
-    - Mobile Device Management: mdm.md
+    - Mobile Device Management: cloud_mdm.md
+    - Dynamic Distribution Lists O365: ddl_o365.md
+    - Managed Identity in Azure AD: cloud_identity.md
+    - IDF at offsite location: idf.md
     - Technical Documentation: techdocs.md
+    - Homelab FileServer with Perforce: studio_perforce.md
 
 theme:
   palette: 
