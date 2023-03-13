@@ -1,7 +1,4 @@
-# Homelab FileServer with Perforce:
-
-This project is about deploying a Mobile Device Manager(MDM) into an organization.
-The MDM that was used was VMware Workspace One formerly known as Airwatch.
+# Homelab Server with Perforce:
 
 Use Case:
 To create a file server for learning / homelab to do achieve the following:
@@ -13,8 +10,6 @@ To create a file server for learning / homelab to do achieve the following:
 * To implement a plan for backup and disaster recovery
 * To not give up so much control to 3rd party services
 * Have more control over my own data
-
-
 
 These are the tasks that need to be solved:
 

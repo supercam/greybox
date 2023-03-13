@@ -1,4 +1,4 @@
-site_name: Supercam Homelabs
+site_name: Supercam Labs
 site_url: https://supercam.github.io/greybox
 nav:
     - Home: index.md
@@ -8,7 +8,9 @@ nav:
     - Managed Identity in Azure AD: cloud_identity.md
     - IDF at offsite location: idf.md
     - Technical Documentation: techdocs.md
-    - Homelab FileServer with Perforce: studio_perforce.md
+    - Homelab Server with Perforce: studio_perforce.md
+
+repo_url: https://github.com/supercam/
 
 theme:
   palette: 
@@ -17,8 +19,8 @@ theme:
         icon: material/weather-sunny
         name: Switch to dark mode
     - scheme: slate
-      primary: blue grey
-      accent: light blue 
+      primary: yellow
+      accent:
       toggle:
         icon: material/weather-night
         name: Switch to light mode

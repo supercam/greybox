@@ -3,9 +3,13 @@
 Projects that I have contributed to.
 
 Legend
-Title
-a. client or personal
-b. budget or language
+
+- Title
+	* a. client or personal
+	* b. budget or language
+
+
+Professional:
 
 1. Mobile Device Management Deployment into org of 1200 users.
 	1. Client / 1200 person org
@@ -22,6 +26,9 @@ b. budget or language
 4. Built an IDF at offsite location.
 	1. Client / 1200 person org
 	2. Est. Spend: $100k
+
+
+Personal:
 
 5. Technical Documentation with mkdocs
 	1. Personal
