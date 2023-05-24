@@ -1,8 +1,8 @@
-# Projects
+# About Projects
 
-Projects that I have contributed to.
+This is a summary of projects that I have contributed to.
 
-Legend
+Layout:
 
 - Title
 	* a. client or personal
@@ -37,4 +37,3 @@ Personal:
 6. Homelab Fileserver running Perforce
 	1. Personal
 	2. Est. Spend $2k
-

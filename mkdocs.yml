@@ -2,13 +2,20 @@ site_name: Supercam Labs
 site_url: https://supercam.github.io/greybox
 nav:
     - Home: index.md
-    - Projects: projects.md
-    - Mobile Device Management: cloud_mdm.md
-    - Dynamic Distribution Lists O365: ddl_o365.md
-    - Managed Identity in Azure AD: cloud_identity.md
-    - IDF at offsite location: idf.md
-    - Technical Documentation: techdocs.md
-    - Homelab Server with Perforce: studio_perforce.md
+    - Projects: 
+      - projects.md
+    - One-Pager Briefs:
+      - Mobile Device Management: cloud_mdm.md
+      - Dynamic Distribution Lists in Office 365: ddl_o365.md
+      - Managed Identity in AzureAD: cloud_identity.md
+      - Building an offsite IDF: idf.md
+      - Jira Cloud Management: Jira_cloud_mgmt.md
+      - Technical Documentation Project: techdocs.md
+    - Personal Projects:
+      - Homelab Server: studio_perforce.md
+    - Reference:
+      - License: license.md
+
 
 repo_url: https://github.com/supercam/
 
@@ -26,5 +33,17 @@ theme:
         name: Switch to light mode
   features:
     - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
   language: en
   name: material
+
+copyright: Copyright &copy; 2023 SuperCam Labs
+
+markdown_extensions:
+  - pymdownx.tasklist:
+      custom_checkbox: true
