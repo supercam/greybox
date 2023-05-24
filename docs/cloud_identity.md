@@ -10,19 +10,24 @@ Pure Cloud Identity and Access Management was the default standard of organizati
 * Smaller database of attributes to work with
 * There is no LDAP
 * Flat directory sturcture no OU's or forests
+* No Active Directory services such as LDFS / ADFS / DNS / DHCP / Hyper-V / IIS
 
 In order to address concerns around the identity the following areas had to be addressed.
 
--Single-Sign On using SAML
+- [x] Single-Sign On
+	* [x] XML authenication to apps that have Azure plugin or no plugin
+- [x] Multi-Factor Authentication
+	* [x] 2FA code prompt
+    * [x] Conditional Access
+    * [x] User Lifecycle involving SCIM/JIT
+    * [x] Azure MFA with modern authentication
+- [x] Attribute Based Access Control (ABAC)
+	* [x] Dynamic Security groups based on attributes
+- [x] Priviledged Identity management
+	* [x] Just-In-Time access to administrative permissions
 
--Multi-Factor Authentication
-
--Conditional Access
-creating basic layers of security to secure the login session when logging into cloud application
-
--User Lifecycle
-90% of the time SCIM was used as part of user lifecycle to get the user in and out of cloud application.
 
 Lessons Learned:
 
 * Azure AD can't really replace AD and needs additional tools to be functional 
+* Smaller database of attributes means hitting limits on attributes used in security groups
