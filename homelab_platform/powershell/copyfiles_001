@@ -1,0 +1,52 @@
+<#
+.Synopsis
+	Copy file to remote device.
+.Description
+	uses copy-item to copy file to users machine.
+	run locally on server or PS-Session to a server to copy files to remote machine
+.Author
+	James Lewis
+#>
+
+#set script to stop on error
+#ErrorActionPreference = 'stop'
+
+#prompt user for workstation ID
+$WSID = Read-Host "Enter WorkstationID of destination machine"
+
+#check if WSID is blank
+if($WSID -eq "") {
+    Write-Host "WorkstationID is blank"
+    Read-Host -Prompt "Press Enter to Exit"
+    Exit
+}
+
+#auth session
+try {
+    $Session = New-PSSession -ComputerName $WSID -Credential "Domain\"
+}
+catch {
+    Write-Host "Failed to Auth." -ForegroundColor Red 
+    $failauth = $._
+    Write-Host $failauth -ForegroundColor Red 
+    Read-Host -Prompt "Press Enter to Exit"
+    Exit
+}
+
+#copy from source machine to destination machine
+#Source is the local machine
+#Destination is the remote machine
+
+try {
+    $Source = Read-Host "Enter Source path"
+    Copy-Item $Source -Destination "C:\Temp" -ToSession $Session -Recurse -Verbose -ErrorAction 'stop'
+    Write-Host -ForegroundColor DarkGreen
+}
+catch {
+    Write-Host "Failed to initiate copy" -ForegroundColor Red
+    $failcopy = $_
+    Write-Host $failcopy -ForegroundColor Red 
+    Exit-PSSession
+}
+Read-Host -Prompt "Press Enter to Exit"
+Exit
