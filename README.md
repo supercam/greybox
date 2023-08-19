@@ -8,6 +8,11 @@ Lab Status: **ALPHA**
 The homelab is still in experimental stage but still acts a showcase of projects.  It also allows room to practice and learn different technologies that can be used in various orgs.
 
 
+## [Portfolio](https://supercam.github.io/greybox/)
+
+
+## Tech Stack
+
 | Tech Stack | Description |
 | --- | --- |
 | Ansible | Configuration Management |
@@ -17,7 +22,7 @@ The homelab is still in experimental stage but still acts a showcase of projects
 | Sunshine / Moonlight | Remote Display |
 | Perforce | Version Control |
 | Keepass | Credentials |
-| Powershell | Codebase |
+| Powershell | [Script Portfolio](https://github.com/supercam/greybox/tree/main/homelab_platform/powershell) |
 
 ## Roadmap
 
