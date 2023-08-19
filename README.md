@@ -20,4 +20,5 @@ The homelab is still in experimental stage but still acts a showcase of projects
 | Powershell | Codebase |
 
 ## License
-
+Copyright © 2023 - Supercam Labs
+Distributed under MIT License.  See `license.md`
