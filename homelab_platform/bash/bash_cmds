@@ -1,0 +1,195 @@
+the way the nas works
+it's free space used vs free space available
+7.21 capacity
+
+
+so the percentage reads space used.  This number should go down.
+free space should go up as data is removed.
+
+from a UI perspective. It would read like this.
+Free space available - the % would increase because space is available
+Free space used - the % goes down because the used space is decreasing
+
+
+
+
+
+
+Powershell
+Install VS code
+Install-powershell -enableeremoting -enablecontext menu
+
+
+ls -l 
+allows you to see the directory
+
+cd - change directory
+clear - clears output
+
+Help (command)
+cd: dbl brackets you can use on or other flag but not both
+sscan top section and figure out options available.
+
+cd --help is another option to get help prompt.
+
+pwd = print working directory
+whoami = who I am logged in as
+
+pushd and popd
+
+tree will show you the directories 
+can use cd in combination with this to traverse the directory
+
+whereis = can be used to find files
+
+whereis bash provides directory
+whereis - b bash = provides the binary
+
+we still need to find out where it resides
+
+which bash
+
+
+man find
+
+find . -name "*.md"
+
+find /home iname file.txt # place i infront of file name to ignore case sensivity
+
+Find . -type d
+
+
+
+finding files
+where / which
+
+man whereis is the help for it.
+whereis bash
+
+whereis will return back binaries and sourcefiles
+
+which only returns executables
+it wont' return source files
+
+
+Find command
+this returns all the files and folders
+you type find and then a starting point and an expression
+find . -name "*.md" #finds all the markdown files in directory
+
+find /home -name file.txt find txt in home directory
+find /home -iname file.txt this avoids case sensitivity
+
+6 main commmands
+mkdir project01 #makes a directory
+mkdir project02 project03 #this creates multiple directores
+mkdir -p project01/sub1/sub2 #allows you to create parent directors for path
+
+to navigate use LS
+ls project01 is first level
+ls project01\sub1 is 2nd level
+
+#this is to make files
+touch project01/file.txt
+
+#moving files
+mv project01
+mv project01/file.txt project02
+#mv (source)(destination)
+
+#copying files
+cp will allow you to copy files
+cp (source)(destination)
+#you can name it a different file for the destination if you don't want to use same name
+
+#removing stuff
+#rm command is first one
+rm file without -r will just work in directory
+rm file* will remove all files with name file
+
+#remove directory is different command
+rmdir /sub1/sub2/
+#can also use wildcards with this this will remove all directories and works if they are empty.
+
+
+#bash allows you to read file
+cat filename #reads out the text of file
+
+#head and tail allows you to break up file
+
+head filename #returns first 10 lines of text file
+tail filename #returns last 10 lines of text file
+
+head -n #returns x number of lines of text file
+
+more fake02.log #allows for navigation of a file
+less name of file #this gives you more options in navigation
+
+grep --help
+
+grep "174.212.2.233" fakelog002.log #this allows you to search file for a specific thing you are calling out
+grep "delete" fakelog002.log #checks for lines with delete in them
+
+#environment variables
+
+#env gives you all the environment variables in the system.
+#echo allows you to return value of the variable
+
+#a few variabls
+
+echo $home #local directory
+echo $user #allows you to know directory of user
+
+echo $path #see number of locations separated by colon - these are locations to executable
+
+#create environment variables, use the export command
+export newVar = value
+echo $newVar
+
+#environment variables are only available in individual sessions.
+#you can howerver access across multiple sessions with .profile
+
+
+all outputs come from streams
+there is output stream and input stream
+#ls-l > output.txt - redicects output
+cat output.txt
+
+touch part3.txt
+#this overwrites the existing file
+ls -l > output.txt
+
+
+touch part4.txt
+#this appends the output to the existing file
+ls -l >> output.txt
+
+
+ls -l ./ dir #you will get error stating that it doesn't existing
+ls -l ./dir 2> error.txt #2 is file decriptor
+
+#redirect errors
+ls -l ./dir > error.txt 2>&1 #tells it to redirect these streams
+
+#redirecting standard input
+cat # will cancantenate different files together.
+
+cat part1.txt part2.txt > paragraph.txt
+cat paragraph.txt
+#this allows you to combine to single file and redirect the input
+
+# pipe symbol chains together commands |
+ls -l bin
+
+ls -l /usr/bin/ | less
+
+#this would return 2 echos back
+ls -l /usr/bin/ | grep echo
+
+#this sorts
+ls -l /usr/bin/ | grep echo | sort
+
+#can be used with tail/head command, example only returns first line
+cat part1.txt | head -n 1
+
+#modify file permissions

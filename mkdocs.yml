@@ -2,17 +2,18 @@ site_name: Supercam Labs
 site_url: https://supercam.github.io/greybox
 nav:
     - Home: index.md
+    - GitHub: https://github.com/supercam
     - Projects: 
       - projects.md
-    - One-Pager Briefs:
+    - Professional Project One-Pagers:
       - Mobile Device Management: cloud_mdm.md
       - Dynamic Distribution Lists in Office 365: ddl_o365.md
       - Managed Identity in AzureAD: cloud_identity.md
       - Building an offsite IDF: idf.md
       - Jira Cloud Management: Jira_cloud_mgmt.md
-      - Technical Documentation Project: techdocs.md
     - Personal Projects:
       - Homelab Server: studio_perforce.md
+      - Technical Documentation Project: techdocs.md
     - Reference:
       - License: license.md
 
