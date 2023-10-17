@@ -1,7 +1,7 @@
 # Mobile Device Management Project:
 
 
-![Workspace One Diagram](https://github.com/supercam/greybox/blob/main/docs/assets/images/homelab_diagram_002.drawio.png "WorkspaceOne UEM Diagram")
+![Workspace One Diagram](/assets/images/homelab_diagram_002.drawio.png "WorkspaceOne UEM Diagram")
 
 This project is about deploying a Mobile Device Manager(MDM) into an organization.
 The MDM that was used was VMware Workspace One UEM formerly known as Airwatch.
