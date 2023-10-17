@@ -1,7 +1,15 @@
 # Mobile Device Management Project:
 
+
+![Workspace One Diagram](https://supercam.github.io/greybox/projects/docs/assets/images/homelab_diagram_002.drawio.png "WorkspaceOne UEM Diagram")
+
 This project is about deploying a Mobile Device Manager(MDM) into an organization.
-The MDM that was used was VMware Workspace One formerly known as Airwatch.
+The MDM that was used was VMware Workspace One UEM formerly known as Airwatch.
+
+Example Documentation:
+
+* [Vmware Techzone UEM to AAD](https://techzone.vmware.com/enrolling-windows-devices-using-azure-ad-workspace-one-uem-operational-tutorial#prerequisites-and-planning
+ "Vmware Techzone UEM to AAD")
 
 Use Case:
 Organization did not have a way to centrally manage machines.  The Organization did not have Microsoft Active Directory(MSAD).  The organization did have Azure Active Directory which was not traditional MSAD.  The organization did also not have an On-Premise Virtual Private Network.  This led to a many bottlenecks in operations such as:

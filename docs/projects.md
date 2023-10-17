@@ -1,15 +1,15 @@
-# About Projects
+# Project Summary
 
 This is a summary of projects that I have contributed to.
 
-Layout:
+**Layout:**
 
 - Title
-	* a. client or personal
+	* a. client / headcount or personal
 	* b. budget or language
 
 
-Professional:
+**Professional:**
 
 1. Mobile Device Management Deployment into org of 1200 users.
 	1. Client / 1200 person org
@@ -28,7 +28,7 @@ Professional:
 	2. Est. Spend: $100k
 
 
-Personal:
+**Personal:**
 
 5. Technical Documentation with mkdocs
 	1. Personal
