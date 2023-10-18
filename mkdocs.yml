@@ -2,7 +2,7 @@ site_name: Supercam Labs
 site_url: https://supercam.github.io/greybox
 nav:
     - Home: index.md
-    - GitHub: https://github.com/supercam
+    - GitHub: https://github.com/supercam/greybox
     - Projects: 
       - projects.md
     - Professional Project One-Pagers:
@@ -14,6 +14,7 @@ nav:
     - Personal Projects:
       - Homelab Server: studio_perforce.md
       - Technical Documentation Project: techdocs.md
+      - PowerShell Scripts: https://github.com/supercam/greybox/tree/c1570cdc4630352845ab886bfe1f873d34bb1f4a/homelab_platform/powershell
     - Reference:
       - License: license.md
 
@@ -23,6 +24,7 @@ repo_url: https://github.com/supercam/
 theme:
   palette: 
     - scheme: default
+      primary: blue
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
