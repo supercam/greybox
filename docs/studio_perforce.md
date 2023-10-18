@@ -1,5 +1,7 @@
 # Homelab Server with Perforce:
 
+![Diagram](assets/images/homelab_diagram_002.drawio.png)
+
 Use Case:
 To create a homelab server for learning and to achieve the following:
 

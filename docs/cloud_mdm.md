@@ -1,5 +1,7 @@
 # Mobile Device Management Project:
 
+![Diagram](assets/images/workspaceOneDiagram_002.drawio.png)
+
 This project is about deploying a Mobile Device Manager(MDM) into an organization.
 The MDM that was used was VMware Workspace One UEM formerly known as Airwatch.
 
