@@ -19,9 +19,13 @@ The homelab is still in experimental stage but still acts a showcase of projects
 | Cloudflare | Remote Access |
 | Proxmox | Virtual Machines |
 | TrueNAS | Storage |
-| Sunshine / Moonlight | Remote Display |
+| Asustor NAS | Storage |
+| Sunshine / Moonlight | Remote GPU Display |
 | Perforce | Version Control |
-| Keepass | Credentials |
+| Keepass / Bitwarden | Credentials |
+| Fortinet Firewall | Network / Netsec |
+| Jira | Project Management |
+| Confluence | Documentation |
 | Powershell | [Script Portfolio](https://github.com/supercam/greybox/tree/main/homelab_platform/powershell) |
 
 ## Roadmap
@@ -33,15 +37,15 @@ The homelab is still in experimental stage but still acts a showcase of projects
 
 - **Storage**
 - [x] Setup TrueNas
-- [ ] Setup zfs pool Raid Mirror
+- [x] Setup zfs pool Raid Mirror
 - [ ] Setup Domain services
-- [ ] Setup Alerting an storage service
+- [x] Setup Alerting an storage service
 
 - **Backup Disaster / Recovery**
-- [ ] Setup TrueNas
-- [ ] Setup NAS
+- [x] Setup TrueNas
+- [x] Setup External NAS
 - [ ] Write Script to copy data on scheduled basis
-- [ ] backup VM configurations to NAS
+- [x] backup VM configurations to NAS
 - [ ] Test reloading VM configurations in proxmox
 
 - **Networking**
@@ -55,12 +59,18 @@ The homelab is still in experimental stage but still acts a showcase of projects
 - [ ] Setup Hansoft
 - [ ] Setup Game Engine
 - [ ] Setup Remote Services
+- [ ] Explore frontend and kiosk mode for locked down VM
 
 - **Configuration Management**
 - [ ] Setup Ansible
 - [ ] Setup Powershell DSC
 - [ ] Setup Chocalatey
 - [ ] Setup playbooks for Windows VM creation and app deployment
+
+- **Identity**
+- [ ] Move Credentials to Keepass
+- [ ] Move 2FA to Bitwarden / Aegis
+- [ ] Research Microsoft AD vs OpenLDAP vs SAMBA
 
 
 ## License
