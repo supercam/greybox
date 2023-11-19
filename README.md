@@ -16,10 +16,11 @@ The homelab is still in experimental stage but still acts a showcase of projects
 | Tech Stack | Description |
 | --- | --- |
 | Ansible / Puppet | Configuration Management |
+| Terraform | Infrastrucure as Code |
 | MS AD | Active Directory |
-| ADFS | Identity |
+| ADFS | Identity and Access Management |
 | Cloudflare | Remote Access with SSL |
-| Proxmox | Virtual Machines |
+| Proxmox | Virtualization |
 | TrueNAS | Storage |
 | Asustor NAS | Storage |
 | Sunshine / Moonlight | Remote GPU Display |
