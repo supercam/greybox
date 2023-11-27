@@ -1,6 +1,7 @@
 # Supercam Homelab
 
-This project is meant to demonstrate the use of a Continuous Integration / Continuous Deployment pipeline. It is part of a homelab project
+This is documentation for Homelab:
+The documentation is formerly placed on supercam.github.io/greybox which demonstrates the use of a Continuous Integration / Continuous Deployment pipeline. 
 
 ## Overview
 Lab Status: **ALPHA**
@@ -15,18 +16,18 @@ The homelab is still in experimental stage but still acts a showcase of projects
 
 | Tech Stack | Description |
 | --- | --- |
-| Ansible / Puppet | Configuration Management |
+| Ansible / Chef | Configuration Management |
 | Terraform | Infrastrucure as Code |
 | MS AD | Active Directory |
 | ADFS | Identity and Access Management |
 | Cloudflare | Remote Access with SSL |
+| RustDesk / Remmina | RDP |
 | Proxmox | Virtualization |
 | TrueNAS | Storage |
 | Asustor NAS | Storage |
-| Sunshine / Moonlight | Remote GPU Display |
+| Sunshine / Moonlight | Remote Streaming |
 | Parsec | Remote GPU Display |
-| Perforce | Version Control |
-| Github | Version Control |
+| Perforce / Github | Version Control |
 | Keepass / Bitwarden | Password Management |
 | Fortinet Firewall | Network / Netsec |
 | Jira | Project Management |
