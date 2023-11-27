@@ -2,8 +2,7 @@
 
 ![Diagram](assets/images/homelab_diagram_002.drawio.png)
 
-Use Case:
-To create a homelab server for learning and to achieve the following:
+Use Case: To create a homelab server for learning and to achieve the following:
 
 - [x] Have more storage rather than what is available on laptop
 	* [x] Setup TrueNAS VM with HBA in zfs Raid 1
@@ -32,15 +31,15 @@ To create a homelab server for learning and to achieve the following:
 - [ ] To better understand continuous monitoring
     * [ ] setting up Zabbix / Grafana for syslog
 
-Homelab Hardware Layout:
-* 64-128GB ram
-* 8c/16t CPU - low power if possible
-* 2-4TB HDD WD RED - CMR drives
-* 1TB nvme boot drive - cheapest you can find
-* Dual NIC 2.5GB
-* PSU low wattage with 80+ gold certification
-* Managed switch 2.5GB
-* HBA card or GPU card
+- Homelab Hardware Outline:
+	* 64-128GB ram
+	* 8c/16t CPU - low power if possible
+	* 2-4TB HDD WD RED - CMR drives
+	* 1TB nvme boot drive - cheapest you can find
+	* Dual NIC 2.5GB
+	* PSU low wattage with 80+ gold certification
+	* Managed switch 2.5GB
+	* HBA card or GPU card
 
 
 
