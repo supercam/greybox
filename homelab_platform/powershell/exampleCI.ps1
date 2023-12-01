@@ -8,7 +8,7 @@
 #>
 
 param(
-    [Switch]$Fail, 
+    [Switch]$Fail
 )
 
 if ($Fail) {
