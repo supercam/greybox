@@ -11,15 +11,17 @@ Example Documentation:
  "Vmware Techzone UEM to AAD")
 
 Use Case:
-Organization did not have a way to centrally manage machines.  The Organization did not have Microsoft Active Directory(MSAD).  The organization did have Azure Active Directory which was not traditional MSAD.  The organization did also not have an On-Premise Virtual Private Network.  This led to a many bottlenecks in operations such as:
 
-* Slow/Delayed Onboarding.
-* Manual Updates.
-* Lack of Security features.
-* Poor application / package management.
-* No Automated Reporting for patches.
-* No Device Logs or System Logs.
-* No way to enforce device compliance to access applications based on Device Groups.
+* Organization did not have a way to centrally manage machines.  
+* The Organization did not have Microsoft Active Directory(MSAD).  
+* The Organization did have Azure Active Directory which was not traditional MSAD.  The organization did also not have an On-Premise Virtual Private Network.  This led to a many bottlenecks in operations such as:
+	* Slow/Delayed Onboarding.
+	* Manual Updates.
+	* Lack of Security features.
+	* Poor application / package management.
+	* No Automated Reporting for patches.
+	* No Device Logs or System Logs.
+	* No way to enforce device compliance to access applications based on Device Groups.
 
 Based on the following a proposal was made to the Chief Technology Officer(CTO) based on Net-Present Value(NPV) to justify the cost of bringing in an MDM.  An initial presentation was created in order to compare the differences between using: MSAD, Azure Active Directory Domain Services (AADDS), and MDM.
 
