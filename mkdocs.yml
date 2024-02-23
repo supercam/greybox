@@ -6,16 +6,17 @@ nav:
     - Projects: 
       - projects.md
     - Professional Project One-Pagers:
-      - Mobile Device Management: proj_cloud_mdm.md
-      - Dynamic Distribution Lists in Office 365: proj_ddl_o365.md
-      - Managed Identity in AzureAD: proj_cloud_identity.md
-      - Building an offsite IDF: proj_idf.md
-      - Jira Cloud Management: proj_Jira_cloud_mgmt.md
+      - Mobile Device Management: proj_1a_cloud_mdm.md
+      - SCCM Application Deployments: proj_1b_Sccm_app_deploy.md
+      - Dynamic Distribution Lists in Office 365: proj_1c_ddl_o365.md
+      - Managed Identity in AzureAD: proj_1d_cloud_identity.md
+      - Building an offsite IDF: proj_1e_idf.md
+      - Jira Cloud Management: proj_1f_Jira_cloud_mgmt.md
     - Personal Projects:
-      - Homelab Server: lab_labSpace.md
-      - Perforce Server: lab_studioPerforce.md
-      - LAMP Server: lab_lampServer.md
-      - Technical Documentation Project: lab_techdocs.md
+      - Homelab Server: lab_1a_labSpace.md
+      - Perforce Server: lab_1b_studioPerforce.md
+      - LAMP Server: lab_1c_lampServer.md
+      - Technical Documentation Project: lab_1d_techdocs.md
       - PowerShell Scripts: https://github.com/supercam/greybox/tree/c1570cdc4630352845ab886bfe1f873d34bb1f4a/homelab_platform/powershell
     - Reference:
       - License: license.md
