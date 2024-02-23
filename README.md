@@ -33,7 +33,7 @@ The homelab is still in experimental stage but still acts a showcase of projects
 | Jira | Project Management |
 | Confluence | Documentation |
 | Zabbix | Monitoring |
-| Powershell | [Script Portfolio](https://github.com/supercam/greybox/tree/main/homelab_platform/powershell) |
+| Powershell | [Script Portfolio](https://github.com/supercam/greybox/tree/main/homelab_platform/powershell/operations) |
 
 ## Roadmap
 
