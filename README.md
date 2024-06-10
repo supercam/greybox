@@ -10,6 +10,9 @@ The homelab is still in experimental stage but still acts a showcase of projects
 ## [Portfolio](https://supercam.github.io/greybox/)
 
 ## [PowerShell Examples](https://github.com/supercam/greybox/tree/main/homelab_platform/powershell/operations)
+* Computer Object Cleanup
+* Remove DNS Record
+* Copy Files
 
 
 ## License
