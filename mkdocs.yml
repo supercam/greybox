@@ -17,7 +17,7 @@ nav:
       - Perforce Server: lab_1b_studioPerforce.md
       - LAMP Server: lab_1c_lampServer.md
       - Technical Documentation Project: lab_1d_techdocs.md
-      - PowerShell Scripts: https://github.com/supercam/greybox/tree/main/homelab_platform/powershell/operations
+      - PowerShell Scripts: https://github.com/supercam/greybox/tree/main/homelab_platform/powershell/operations_Prod
     - Reference:
       - License: license.md
 
