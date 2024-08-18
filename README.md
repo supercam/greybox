@@ -15,7 +15,7 @@ The homelab is still in experimental stage but still acts a showcase of projects
 * Building an MDF/IDF
 * Jira Cloud Management
 
-## [PowerShell](https://github.com/supercam/greybox/tree/main/homelab_platform/powershell/operations)
+## [PowerShell](https://github.com/supercam/greybox/tree/main/homelab_platform/powershell/operations_Prod)
 * Computer Object Cleanup
 * Remove DNS Record
 * Copy Files
