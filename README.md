@@ -1,7 +1,7 @@
 # Supercam Homelab
 
 This is documentation for Homelab and PowerShell Scripts:
-The documentation is formally placed on supercam.github.io/greybox which demonstrates the use of a Continuous Integration / Continuous Deployment pipeline. 
+The documentation is formally placed on https://supercam.github.io/greybox/ which demonstrates the use of a Continuous Integration / Continuous Deployment pipeline using mkdocs.
 
 ## Overview
 Lab Status: **ALPHA**
