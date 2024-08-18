@@ -8,11 +8,21 @@
 	James Lewis
 #>
 
+[CmdletBinding()]
+Param(
+    [parameter(mandatory = $true)]
+    [string]$WSID = "",
+
+    [parameter(mandatory = $true)]
+    [string]$Source = "",
+
+    [parameter(mandatory = $true)]
+    [string]$Destination = "$env:SystemDrive\Temp"
+
+)
+
 #set script to stop on error
 $ErrorActionPreference = 'stop'
-
-#prompt user for workstation ID
-$WSID = Read-Host "Enter WorkstationID of destination machine"
 
 #check if WSID is blank
 if($WSID -eq "") {
@@ -39,9 +49,7 @@ catch {
 #using verbose to write to console, there are other methods to do this but want to see directly in console
 
 try {
-    $Source = Read-Host "Enter Source path"
-    Copy-Item $Source -Destination "C:\Temp" -ToSession $Session -Recurse -PassThru -Verbose
-    Write-Host -ForegroundColor DarkGreen
+    Copy-Item $Source -Destination $Destination -ToSession $Session -Recurse -PassThru -Verbose
 }
 catch {
     Write-Host "Failed to initiate copy `n" -ForegroundColor Red
