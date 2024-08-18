@@ -84,3 +84,5 @@ Lessons Learned:
 * Deployments should be tested thoroughly for success, SCCM is very slow so changes will take time to propagate.
 * Be aware of using cycles to help flush the filters so Software Center can check for new applications.
 * Check logs for error codes and status updates.
+* Make sure proper content locations are picked or else deployment will fail.
+* Be aware of dynamic content, dynamic content can be placed to read from folders to be deployed to a task sequence.
