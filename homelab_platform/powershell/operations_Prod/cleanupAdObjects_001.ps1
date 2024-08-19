@@ -40,10 +40,10 @@ Param(
     [bool]$moduleChk = $false, #checks for AD module.
 
     [parameter(mandatory = $false)]
-    [switch]$credsChk, #checks if creds need to be entered
+    [bool]$credsChk, #checks if creds need to be entered
 
     [parameter(mandatory = $false)]
-    [switch]$secCredsChk, #checks for mapping to secured credentials
+    [bool]$secCredsChk, #checks for mapping to secured credentials
 
     [parameter(mandatory = $false)]
     [string]$secCredsPath = "$env:SystemDrive\Temp" #path to secured credentials

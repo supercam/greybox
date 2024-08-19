@@ -29,10 +29,10 @@ Param(
     [bool]$jobGetListComplete = $false, #checks if csv is created.
 
     [parameter(mandatory = $false)]
-    [switch]$credsChk, #checks if creds need to be entered
+    [bool]$credsChk, #checks if creds need to be entered
 
     [parameter(mandatory = $false)]
-    [switch]$secCredsChk, #checks for mapping to secured credentials
+    [bool]$secCredsChk, #checks for mapping to secured credentials
 
     [parameter(mandatory = $false)]
     [string]$secCredsPath = "$env:SystemDrive\Temp" #path to secured credentials
@@ -55,7 +55,7 @@ Try
     }
     else 
     {
-        Write-Host "Ignore Auth"    
+        Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Ignore Auth Check." | Out-File -FilePath $rmAppLog -Append  
     }
     
 }
@@ -102,7 +102,7 @@ Try
     }
 
     #if job successfull mark complete
-    $jobComplete = $True
+    $jobGetListComplete = $True
 }
 catch
 {
@@ -112,7 +112,7 @@ catch
         Exit
 }
 
-if ($jobComplete -eq $True) 
+if ($jobGetListComplete -eq $True) 
 {
     Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Success, Removed Apps." | Out-File -FilePath $rmAppLog -Append
     Exit
