@@ -62,7 +62,7 @@ $devicesCSV = "$env:SystemDrive\Temp\servers001-$(Get-Date -Format yyyy-MM-dd-hh
 $adObjLog = "$env:SystemDrive\Temp\adServObjLog.txt"
 
 #attempt to get ActiveDirectory Module
-if ($moduleChk)
+if ($moduleChk -eq $true)
 {
     Try
     {
@@ -87,13 +87,9 @@ if ($moduleChk)
 #attempt to get Credentials
 Try
 {
-    if ($credsChk)
+    if ($credsChk -eq $true)
     {
         $Creds = Get-Credential
-    }
-    else 
-    {
-        Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Credentials entered incorrectly." | Out-File -FilePath $adObjLog -Append
     }
     
 }
@@ -109,7 +105,7 @@ catch
 #attempt to get sec Credentials
 Try
 {
-    if ($secCredsChk)
+    if ($secCredsChk -eq $true)
     {
         $secCredsXml = Import-Clixml -Path $secCredsPath
         Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Found secured credentials path." | Out-File -FilePath $adObjLog -Append
@@ -154,7 +150,7 @@ catch
 }
 
 #Move AD objects to archiveOU if called from parameter
-if ($moveArchiveOU)
+if ($moveArchiveOU -eq $true)
 {
     Try
     {

@@ -49,7 +49,7 @@ $rmAppLog = "$env:SystemDrive\Temp\rmAppLog.txt"
 #attempt to get Credentials
 Try
 {
-    if ($credsChk)
+    if ($credsChk -eq $true)
     {
         $Creds = Get-Credential
     }
@@ -71,14 +71,14 @@ catch
 #attempt to get sec Credentials
 Try
 {
-    if ($secCredsChk)
+    if ($secCredsChk -eq $true)
     {
         $secCredsXml = Import-Clixml -Path $secCredsPath
         Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Found secured credentials path." | Out-File -FilePath $rmAppLog -Append
     }
     else 
     {
-        Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Failed to find secured credentials." | Out-File -FilePath $rmAppLog -Append   
+        Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Ignore secCredsChk" | Out-File -FilePath $rmAppLog -Append   
     }
     
 }
@@ -94,11 +94,12 @@ catch
 
 Try
 {
+    Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Start App Removal Job." | Out-File -FilePath $rmAppLog -Append
     $rmAppCmd = Get-AppXPackage | where-object {$_.name -in $appList }
     foreach ($app in $rmAppCmd)
     {
         $app | Remove-AppxPackage
-        Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "removed " $app.name | Out-File -FilePath $rmAppLog -Append
+        Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "removed $app.name" | Out-File -FilePath $rmAppLog -Append
     }
 
     #if job successfull mark complete
@@ -114,7 +115,7 @@ catch
 
 if ($jobGetListComplete -eq $True) 
 {
-    Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Success, Removed Apps." | Out-File -FilePath $rmAppLog -Append
+    Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Success, Removed Apps. Exiting" | Out-File -FilePath $rmAppLog -Append
     Exit
 }
 
