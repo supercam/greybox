@@ -180,7 +180,7 @@ if ($moveArchiveOU -eq $true)
 
 if ($jobGetListComplete -eq $True) 
 {
-    Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Success, Server List Compliation Complete." | Out-File -FilePath $adObjLog -Append
+    Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Success, Server List Compilation Complete." | Out-File -FilePath $adObjLog -Append
     Exit
 }
 
