@@ -52,19 +52,19 @@ if ($logging -eq $true)
     {
         if (test-path "$env:SystemDrive\temp") 
         {
-             Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Path already exists." | Out-File -FilePath $winRmLog -Append
+            Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Path already exists." | Out-File -FilePath $winRmLog -Append
         } 
         else 
         {
+            New-Item -Path "$env:SystemDrive\Temp" -ItemType Directory | Out-Null
             Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Writing temp directory." | Out-File -FilePath $winRmLog -Append
-            #New-Item -Path "$env:SystemDrive\Temp" -ItemType Directory | Out-Null
         }
     }
     catch
     {
-        Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Failed to create path for logging." | Out-File -FilePath $winRmLog -Append
+        Write-Error (Get-Date -Format MM-dd-yyyy-hh-mm) "Failed to create path for logging." | Out-File -FilePath $winRmLog -Append
         $failDir = $_
-        Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) $failDir | Out-File -FilePath $winRmLog -Append
+        Write-Error (Get-Date -Format MM-dd-yyyy-hh-mm) $failDir
         Exit
     }
 }
