@@ -14,13 +14,13 @@ Param(
     [string]$secCredPathXml = "$env:SystemDrive\Temp\secCred.xml", #path for xml
 
     [parameter(mandatory = $false)]
-    [string]$logPath = "$env:SystemDrive\Temp\Log001.txt",
+    [bool]$logging, #for logging
 
     [parameter(mandatory = $false)]
-    [switch]$UseSecCredsXml, #use for XML
+    [bool]$useSecCredsXml, #use for XML
 
     [parameter(mandatory = $false)]
-    [string]$secCredsXml, #use for XML
+    [string]$secCredsXml, #use for XML pwd
 
     [parameter(mandatory = $false)]
     [bool]$secCredsXmlJobComplete = $false #mark job complete
@@ -30,11 +30,66 @@ Param(
 #Set Error Action Preference
 $ErrorActionPreference = 'stop'
 
+#variables
+$secXmlGenLog = "$env:SystemDrive\Temp\secXmlGenLog.txt"
+
+#attempt to setup logging by checking for temp directory, if it doesn't exist it will create it.
+if ($logging -eq $true)
+{
+    Try
+    {
+        if (test-path "$env:SystemDrive\temp") 
+        {
+            Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Path already exists." | Out-File -FilePath $secXmlGenLog -Append
+        } 
+        else 
+        {
+            New-Item -Path "$env:SystemDrive\Temp" -ItemType Directory | Out-Null
+            Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Writing temp directory." | Out-File -FilePath $secXmlGenLog -Append
+        }
+    }
+    catch
+    {
+        Write-Error (Get-Date -Format MM-dd-yyyy-hh-mm) "Failed to create path for logging." | Out-File -FilePath $secXmlGenLog -Append
+        $failDir = $_
+        Write-Error (Get-Date -Format MM-dd-yyyy-hh-mm) $failDir
+        Exit
+    }
+}
+
+
+
+
+#attempt to make path for credentials
+
+if ($useSecCredsXml -eq $True)
+{
+    Try
+    {
+        if (test-path "$env:SystemDrive\temp")
+        {
+            Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Path already exists." | Out-File -FilePath $secXmlGenLog -Append
+        } 
+        else
+        {
+            New-Item -Path "$env:SystemDrive\Temp" -ItemType Directory | Out-Null
+            Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Writing temp directory." | Out-File -FilePath $secXmlGenLog -Append
+        }
+    }
+    catch
+    {
+        Write-Error (Get-Date -Format MM-dd-yyyy-hh-mm) "Failed to create path for logging." | Out-File -FilePath $secXmlGenLog -Append
+        $failDir = $_
+        Write-Error (Get-Date -Format MM-dd-yyyy-hh-mm) $failDir
+        Exit
+    }
+}
+
 
 #attempt to get Credentials
 Try
 {
-    if ($UseSecCredsXml)
+    if ($useSecCredsXml -eq $True)
     {
 
         #get Credential
@@ -50,9 +105,9 @@ Try
 }
 catch
 {
-    Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Failed to output XML." | Out-File -FilePath $Log001 -Append
+    Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Failed to output XML." | Out-File -FilePath $secXmlGenLog -Append
     $failAuth = $_
-    Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) $failAuth | Out-File -FilePath $Log001 -Append
+    Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) $failAuth | Out-File -FilePath $secXmlGenLog -Append
     Read-Host "Press any key to exit"
     Exit
 }
