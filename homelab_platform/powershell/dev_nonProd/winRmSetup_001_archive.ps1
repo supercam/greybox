@@ -77,8 +77,10 @@ if ($winRmSetup -eq $true)
     Try
     {
         Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Attempt to setup WinRm on main device." | Out-File -FilePath $winRmLog -Append
+        winrm quickconfig
+        Start-Service -Name WinRM
+        Set-Service -Name WinRM -StartupType Automatic
         Set-NetConnectionProfile -NetworkCategory Private
-        Enable-PSRemoting -Force
 
         #validate service is running
         Try

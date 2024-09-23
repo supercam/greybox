@@ -2,7 +2,8 @@
 .Synopsis
 	remove DNS record
 .Description
-	use this to remove dns records on a workstation device.  Assumes AD module is installed.
+	Use this to remove dns records on a workstation device.  Assumes AD module is installed.
+    Intended to be use interactively.
 .Author
 	James Lewis
 #>
@@ -30,7 +31,7 @@ try
 {
     $device = Get-ADComputer -Filter "Enabled -eq 'True'" $WSID
     Write-Host "Checking if device exists"
-    if ($device.enabled eq "True") 
+    if ($device.enabled -eq "True") 
     {
         Write-Host "found $device"    
     }
