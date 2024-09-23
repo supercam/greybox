@@ -3,6 +3,23 @@
 	Create Secure Credential
 .Description
 	Has option for xml or pscredential
+
+    Additional notes to use secured credentials for a remote device with XML.
+    $credential = Import-Clixml -Path "$env:SystemDrive\temp\credential.xml"
+    $session = New-PSSession -ComputerName "IP" -Credential $credent
+    Enter-pssession -Session $session
+
+    Method to do this with secure-string
+    $usrName = "randomuser"
+    $remotePassword = "RandomPassword"
+    $securePassword = ConvertTo-SecureString -String $remotePassword -AsPlainText -Force
+    $credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $usrName, $securePassword
+    $session = New-PSSession -ComputerName DestinationIP -Credential $credential
+    Enter-PSSession -Session $session 
+
+    if unable to bypass via a session / set remote VM or device execution policy to remotesigned using set-executionpolicy
+    remotesigned allows scripts to run locally but still requires external script validation
+
 .Author
 	James Lewis
 #>
@@ -50,18 +67,15 @@ if ($logging -eq $true)
     }
     catch
     {
-        Write-Error (Get-Date -Format MM-dd-yyyy-hh-mm) "Failed to create path for logging." | Out-File -FilePath $secXmlGenLog -Append
+        Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Failed to create path for logging." | Out-File -FilePath $secXmlGenLog -Append
         $failDir = $_
-        Write-Error (Get-Date -Format MM-dd-yyyy-hh-mm) $failDir
+        Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) $failDir
         Exit
     }
 }
 
 
-
-
 #attempt to make path for credentials
-
 if ($useSecCredsXml -eq $True)
 {
     Try
@@ -78,9 +92,9 @@ if ($useSecCredsXml -eq $True)
     }
     catch
     {
-        Write-Error (Get-Date -Format MM-dd-yyyy-hh-mm) "Failed to create path for logging." | Out-File -FilePath $secXmlGenLog -Append
+        Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Failed to create path for logging." | Out-File -FilePath $secXmlGenLog -Append
         $failDir = $_
-        Write-Error (Get-Date -Format MM-dd-yyyy-hh-mm) $failDir
+        Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) $failDir
         Exit
     }
 }
@@ -98,9 +112,13 @@ Try
 
         #export Credential
         Write-Verbose "Exporting Credential" -Verbose
-        $secCredsXml | Export-Clixml -Path $secCredPath
+        $secCredsXml | Export-Clixml -Path $secCredPathXml
 
-        $secCredXmlJobComplete = $True
+        if (test-path $secCredPathXml)
+        {
+            Write-Output (Get-Date -Format MM-dd-yyyy-hh-mm) "Validated XML file exists" | Out-File -FilePath $secXmlGenLog -Append
+            $secCredXmlJobComplete = $True
+        }
     }
 }
 catch
