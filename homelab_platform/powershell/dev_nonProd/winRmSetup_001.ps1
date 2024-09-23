@@ -14,7 +14,7 @@
 [CmdletBinding()]
 Param(
     [parameter(mandatory = $false)]
-    [string[]]$vmList = @("172.16.0.12","172.16.0.3"),
+    [string[]]$vmList = @("172.16.0.12","172.16.0.7"),
 
     [parameter(mandatory = $false)]
     [bool]$setvmList = $false, #default value to not update Trust host.
