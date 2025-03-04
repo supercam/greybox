@@ -1,4 +1,4 @@
-name: of
+name: mkdocs_deprecated_actions
 on:
   push:
     branches:
