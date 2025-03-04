@@ -1,4 +1,4 @@
-name: ci_mkdocks 
+name: of
 on:
   push:
     branches:
