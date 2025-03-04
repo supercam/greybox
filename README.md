@@ -20,7 +20,7 @@ The homelab is still in experimental stage but still acts a showcase of projects
 * Remove DNS Record
 * Copy Files
 
-## [Python](https://github.com/supercam/greybox/tree/main/homelab_platform/python)
+## [Python](https://github.com/supercam/greybox/tree/main/homelab_platform/python/pyProd)
 * CSV Sorter
 * Password Generator
 
