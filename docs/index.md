@@ -8,3 +8,4 @@ This is meant to be a technical documentation hub for all the projects I have wo
 	* Summarized under [Project Summary](https://supercam.github.io/greybox/projects/ "Project Summary").
 	* One-page briefs are under Professional Project One-Pagers and Personal Projects.
 	* [PowerShell](https://github.com/supercam/greybox/tree/main/homelab_platform/powershell/operations_Prod "PowerShell") scripts are on GitHub.
+	* [Python](https://github.com/supercam/greybox/tree/main/homelab_platform/powershell/operations_Prod "Python") scripts are on GitHub.
