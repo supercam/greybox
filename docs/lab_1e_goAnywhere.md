@@ -78,6 +78,7 @@ SHOW GRANTS FOR 'gadata'@'%';
 USE gadata;
 SHOW TABLES;
 SELECT * FROM dpa_username LIMIT 10;
+```
 
 
 Lessons Learned:
