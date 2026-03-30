@@ -3,7 +3,7 @@
 These projects are meant to demonstrate the use of a GoAnywhere, this documentation showing the progress.
 
 
-Use Case:
+## Use Case:
 
 * Install GoAnywhere MFT  
 * Steps
@@ -31,7 +31,7 @@ Use Case:
 * Provide all privileges to new user.
 
 * Open MySQL.
-* Be logged in as root or user that can grant permissions and create DB.\
+* Be logged in as root or user that can grant permissions and create DB.
 * Enter the following commands
 * This creates the database
 ```sql
