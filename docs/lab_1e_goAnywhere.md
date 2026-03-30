@@ -73,6 +73,7 @@ SHOW GRANTS FOR 'gadata'@'%';
 
 * validate database was changed.
 * validate data was moved successfully
+
 ```sql
 USE gadata;
 SHOW TABLES;
@@ -80,5 +81,6 @@ SELECT * FROM dpa_username LIMIT 10;
 
 
 Lessons Learned:
+
 * Need to review logs in order to check if service is active.
 
